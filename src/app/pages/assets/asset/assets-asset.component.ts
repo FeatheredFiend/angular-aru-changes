@@ -9,7 +9,7 @@ import { UserService, AuthenticationService } from '../../../_services';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
 import {MatPaginator} from '@angular/material/paginator';
-import { JobDashboardComponent } from '../job-table/job-table.component';
+
 
 @Component({ templateUrl: 'assets-asset.component.html' })
 export class AssetsAssetComponent {

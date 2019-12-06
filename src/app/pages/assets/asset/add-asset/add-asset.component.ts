@@ -17,29 +17,13 @@ const Asset_Data: Asset[] = [
 { id: 4, barcode: 'IWH', type: "Sink" },
 ];
 
-@Component({ selector: 'view-asset-table', templateUrl: 'view-asset-table.component.html' })
-export class ViewAssetTableComponent {
+@Component({ selector: 'add-asset', templateUrl: 'add-asset.component.html' })
+export class AddAssetComponent {
 
-
-
-    user: User = null;
-  // Data for Top Row Asset Table
-  displayedColumnsAssets: string[] = ['id', 'barcode', 'type'];
-  dataSourceAssets = new MatTableDataSource(Asset_Data);
-
-
-  // Filtering for Top Row Asset Table
-  applyFilterAssets(filterValue: string) {
-    this.dataSourceAssets.filter = filterValue.trim().toLowerCase();
-  }
-
-  // Sorting
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
-  
-  ngOnInit() {
-    this.dataSourceAssets.sort = this.sort;
-  }
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
 
 
     constructor(
