@@ -19,6 +19,7 @@ import { ProfileComponent } from './pages/profile';
 import { AssetsAssetComponent } from './pages/assets/asset';
 import { ViewAssetTableComponent } from './pages/assets/asset/view-asset';
 import { AddAssetComponent } from './pages/assets/asset/add-asset';
+import { EditAssetComponent } from './pages/assets/asset/edit-asset';
 
 import { GoogleChartsModule } from 'angular-google-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -46,7 +47,8 @@ import {DemoMaterialModule} from './material-module';
         ProfileComponent,
         AssetsAssetComponent,
         ViewAssetTableComponent,
-        AddAssetComponent
+        AddAssetComponent,
+        EditAssetComponent
     ],
     exports: [
 
