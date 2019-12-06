@@ -1,0 +1,1 @@
+export * from './view-asset-table.component';

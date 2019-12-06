@@ -1,0 +1,52 @@
+<!-- nav -->
+<div *ngIf="currentUser">
+  <!-- Sticky Header-->
+  <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" routerLink="/dashboard">Dashboard</a>
+      <a class="nav-item nav-link" routerLink="/profile">Profile</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAssets" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Assets
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownAssets">
+        <a class="dropdown-item" href="/assets">Assets</a>
+        <a class="dropdown-item" href="#">Building</a>
+        <a class="dropdown-item" href="#">Department</a>
+      </div>
+    </li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJobs" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Jobs
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownJobs">
+      <a class="dropdown-item" href="#">Task List</a>
+      <a class="dropdown-item" href="#">Amend Jobs</a>
+      <a class="dropdown-item" href="#">Job History</a>
+    </div>
+  </li>
+    <ul class="nav navbar-nav ml-auto">
+      <a class="nav-item nav-link" (click)="logout()">Logout {{currentUser.username}}</a>
+    </ul>
+  </nav>
+</div>
+
+<!-- main app container -->
+<div class="">
+  <router-outlet></router-outlet>
+</div>
+<div class="col-12 text-center">
+  <footer class="footer">Copyright 2019</footer>
+</div>
